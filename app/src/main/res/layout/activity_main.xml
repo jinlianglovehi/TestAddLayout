@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+    </LinearLayout>
+    <com.doudou.cn.testaddlayout.WordWrapView
+        android:id="@+id/word_wrap_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.doudou.cn.testaddlayout.TestViewGroup
+        android:id="@+id/test_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入内容"
+        android:layout_below="@id/word_wrap_view"
+        android:text=""
+        />
+    <Button
+        android:id="@+id/btn_add"
+        android:text="添加内容"
+        android:layout_below="@id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

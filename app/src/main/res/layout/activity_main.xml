@@ -18,11 +18,18 @@
     <com.doudou.cn.testaddlayout.WordWrapView
         android:id="@+id/word_wrap_view"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="wrap_content"/>
 
 
     <com.doudou.cn.testaddlayout.TestViewGroup
         android:id="@+id/test_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 添加的是多个view-->
+    <com.doudou.cn.testaddlayout.WordWrapMulView
+        android:id="@+id/mulview_wordwrap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText

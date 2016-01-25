@@ -26,6 +26,8 @@ private static final String TAG = MainActivity.class.getSimpleName();
     private TextView tvContent;
 
     private TestViewGroup testViewGroup;
+    private WordWrapMulView mulView ;
+
 
 private  WordWrapView wordWrapView;
     @Override
@@ -36,6 +38,11 @@ private  WordWrapView wordWrapView;
         tvContent = (TextView) findViewById(R.id.tv_content);
         testViewGroup = (TestViewGroup) findViewById(R.id.test_content);
 
+        //测试的是
+        mulView = (WordWrapMulView) findViewById(R.id.mulview_wordwrap);
+
+
+
         initView();
         initWordView();
         button.setOnClickListener(
@@ -43,10 +50,14 @@ private  WordWrapView wordWrapView;
                     @Override
                     public void onClick(View v) {
                         Log.i("TestViewGroup", "onClick 添加一个textView");
-                        TextView textview = new TextView(MainActivity.this);
-                        textview.setText(tvContent.getText().toString().trim());
-//                        testViewGroup.addView(textview);
-                        wordWrapView.addView(textview);
+//                        TextView textview = new TextView(MainActivity.this);
+//                        textview.setText(tvContent.getText().toString().trim());
+////                        testViewGroup.addView(textview);
+                       LinearLayout layout = (LinearLayout) LayoutInflater.from(
+                                MainActivity.this
+                        ).inflate(R.layout.test_mulview,null);
+                        ((TextView) layout.findViewById(R.id.demo02)).setText(tvContent.getText().toString().trim());
+                        mulView.addView(layout);
                     }
                 }
         );
